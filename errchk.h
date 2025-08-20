@@ -1,5 +1,6 @@
 #include<stdlib.h>
 #include<string.h>
+#include<errno.h>
 
 void fatal(char *msg) {
     char err_msg[100];
