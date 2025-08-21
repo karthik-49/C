@@ -20,13 +20,14 @@ int main(int argc, char *argv[]) {
                     match = 0;
             }
             if(keyword_len == match)
-                return 1;
+                return i;
         }
         return 0;
     }
 
-    if(find(note,keyword))
-        printf("Pattern matched.\n");
-    else
+    int k = find(note,keyword);
+    if(k==0)
         printf("Failed. \n");
+    else
+        printf("Pattern matched from %d to %d.\n",(k+2)-strlen(keyword),k+1);
 }
